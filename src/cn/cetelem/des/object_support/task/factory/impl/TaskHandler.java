@@ -1,4 +1,4 @@
-package cn.cetelem.des.object_support.task.factory;
+package cn.cetelem.des.object_support.task.factory.impl;
 
 import java.util.Map;
 
@@ -8,7 +8,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Repository;
 
 import cn.cetelem.des.expression.TaskChecker;
-import cn.cetelem.des.object_support.task.factory.impl.TaskFactory;
+import cn.cetelem.des.object_support.task.factory.TaskFactory;
 import cn.cetelem.des.object_support.task.pojo.BaseNode;
 import cn.cetelem.des.object_support.task.resolver.TaskResolver;
 import cn.cetelem.des.pool.TaskPooledObjectFactory;

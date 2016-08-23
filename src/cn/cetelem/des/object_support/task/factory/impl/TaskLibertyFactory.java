@@ -1,9 +1,9 @@
-package cn.cetelem.des.object_support.task.factory;
+package cn.cetelem.des.object_support.task.factory.impl;
 
 import java.util.Map;
 import java.util.Set;
 
-import cn.cetelem.des.object_support.task.factory.impl.TaskFactory;
+import cn.cetelem.des.object_support.task.factory.TaskFactory;
 import cn.cetelem.des.object_support.task.pojo.BaseNode;
 import cn.cetelem.des.object_support.task.pojo.TaskEntitys;
 import cn.cetelem.des.object_support.task.resolver.TaskResolver;

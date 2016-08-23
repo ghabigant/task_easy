@@ -1,4 +1,4 @@
-package cn.cetelem.des.object_support.task.factory;
+package cn.cetelem.des.object_support.task.factory.impl;
 
 import java.util.Set;
 
@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.context.support.ApplicationObjectSupport;
 import org.springframework.stereotype.Service;
 
-import cn.cetelem.des.object_support.task.factory.impl.TaskFactory;
+import cn.cetelem.des.object_support.task.factory.TaskFactory;
 import cn.cetelem.des.object_support.task.resolver.TaskResolver;
 import cn.cetelem.des.taskBean.TaskBean;
 import cn.cetelem.des.utils.AfterTip;
