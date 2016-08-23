@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tasks SYSTEM "/META-INF/task.dtd">
-<tasks defaultInType="cn.cetelem.des.test.SimpleBean" defaultOutType="cn.cetelem.des.test.SimpleBean">
-	<start name="start" expression="true" goto="task1" />
-	<task name="task1" expression="decision='false'" goto="task2"/>
-	<task name="task2" expression="bean.name == 'ccc'" goto="task3"/>
-	<task name="task3" expression="bean.name == 'ccc'" goto="end"/>
-	<end name="end" expression="true"/>
-</tasks>
