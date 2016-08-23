@@ -1,0 +1,30 @@
+<!ELEMENT tasks (start | task | end)*>
+
+<!ATTLIST tasks defaultInType CDATA #IMPLIED>
+<!ATTLIST tasks defaultOutType CDATA #IMPLIED>
+<!ATTLIST tasks default CDATA #IMPLIED>
+
+<!ELEMENT start EMPTY>
+
+<!ATTLIST start goto CDATA #REQUIRED>
+<!ATTLIST start name CDATA #REQUIRED>
+<!ATTLIST start expression CDATA "true">
+<!ATTLIST start inType CDATA #IMPLIED>
+<!ATTLIST start outType CDATA #IMPLIED>
+<!ATTLIST start method CDATA #IMPLIED>
+
+<!ELEMENT task EMPTY>
+
+<!ATTLIST task name CDATA #REQUIRED>
+<!ATTLIST task goto CDATA #REQUIRED>
+<!ATTLIST task inType CDATA #IMPLIED>
+<!ATTLIST task outType CDATA #IMPLIED>
+<!ATTLIST task expression CDATA #IMPLIED>
+<!ATTLIST task method CDATA #IMPLIED>
+
+<!ELEMENT end EMPTY>
+<!ATTLIST end name CDATA #REQUIRED>
+<!ATTLIST end expression CDATA "true">
+<!ATTLIST end inType CDATA #IMPLIED>
+<!ATTLIST end method CDATA #IMPLIED>
+

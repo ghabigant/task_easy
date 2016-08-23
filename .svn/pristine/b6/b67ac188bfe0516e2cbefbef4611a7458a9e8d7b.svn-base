@@ -1,0 +1,97 @@
+package cn.cetelem.des.test;
+
+import java.util.concurrent.TimeUnit;
+
+import org.junit.Test;
+import org.springframework.beans.BeansException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import cn.cetelem.des.interceptor.TaskLogger;
+import cn.cetelem.des.object_support.task.factory.TaskHandler;
+
+public class AcTest {
+	TaskLogger logger = TaskLogger.getLogger(AcTest.class);
+	private static volatile int i = 0;
+
+	@Test
+	public void test1() throws BeansException, Exception {
+		Thread.currentThread().setName("主线程");
+		ApplicationContext ac = new ClassPathXmlApplicationContext(
+				"cn/cetelem/des/config/applicationContext.xml");
+
+		new Thread() {
+			@Override
+			public void run() {
+				while (true) {
+					try {
+						TimeUnit.MILLISECONDS.sleep(200);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+					logger.info("连接数："
+							+ TaskHandler.taskPool.getBorrowedCount()
+							+ "||创建对象数："
+							+ TaskHandler.taskPool.getCreatedCount());
+				}
+			}
+		}.start();
+
+		for (int i = 0; i < 10000; i++) {
+			Thread task = new TaskThread(ac, i);
+			task.start();
+			Thread.sleep(5);
+		}
+		SimpleBean sb = (SimpleBean) ac.getBean("taskHandler",
+				TaskHandler.class).pushAll(new SimpleBean("ccc", "18"));
+		logger.info(Thread.currentThread().getName() + sb.toString());
+		Thread.sleep(5000000);
+	}
+
+	class TaskThread extends Thread {
+		private ApplicationContext ac;
+
+		TaskThread(ApplicationContext ac) {
+			this.ac = ac;
+		}
+
+		TaskThread(ApplicationContext ac, Integer i) {
+			super("第" + i + "线程");
+			this.ac = ac;
+		}
+
+		@Override
+		public void run() {
+				SimpleBean sb = null;
+				try {
+					sb = (SimpleBean) ac.getBean("taskHandler",
+							TaskHandler.class).pushAll(new SimpleBean("ccc", "18"));
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				logger.info(Thread.currentThread().getName() + "||"
+						+ sb.toString()+"||"+i);
+				i++;
+		}
+	}
+
+	@Test
+	public void test2() throws BeansException, Exception {
+		@SuppressWarnings("resource")
+		ApplicationContext ac = new ClassPathXmlApplicationContext(
+				"cn/cetelem/des/config/applicationContext.xml");
+		@SuppressWarnings("unused")
+		SimpleBean sb = (SimpleBean) ac.getBean("taskHandler",
+				TaskHandler.class).pushAll(new SimpleBean("ccc", "18"));
+	}
+
+	@Test
+	public void test3() {
+		@SuppressWarnings("resource")
+		ApplicationContext ac = new ClassPathXmlApplicationContext(
+				"cn/cetelem/des/config/applicationContext.xml");
+		System.out.println(ac.getBean("testTaskBean"));
+	}
+
+}

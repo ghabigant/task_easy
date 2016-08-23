@@ -1,0 +1,29 @@
+package cn.cetelem.des.test;
+
+import org.springframework.stereotype.Repository;
+
+import cn.cetelem.des.interceptor.TaskLogger;
+import cn.cetelem.des.taskBean.TaskBean;
+import cn.cetelem.des.utils.Singleton;
+
+
+@Repository
+@Singleton
+public class Start implements TaskBean {
+	private TaskLogger logger = TaskLogger.getLogger(Start.class);
+	@Override
+	public Object invoke(Object context) {
+		logger.info("开始");
+		SimpleBean simpleb = (SimpleBean) context;
+		simpleb.setAge("33");
+		return simpleb;
+	}
+	
+	public SimpleBean start(SimpleBean context) {
+		logger.info("开始");
+		SimpleBean simpleb = (SimpleBean) context;
+		simpleb.setAge("33");
+		return simpleb;
+	}
+
+}

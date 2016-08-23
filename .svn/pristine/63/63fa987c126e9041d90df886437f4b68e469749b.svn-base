@@ -1,0 +1,70 @@
+/**
+ * 
+ */
+package cn.cetelem.des.thread.listener.impl;
+
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+import javax.annotation.Resource;
+import javax.xml.ws.WebServiceContext;
+
+import org.springframework.stereotype.Repository;
+
+import cn.cetelem.des.interceptor.TaskLogger;
+import cn.cetelem.des.thread.listener.DesListener;
+
+/**
+ * @author flaki
+ * @date 2016年6月12日
+ * @type DesListener
+ * @version 1.0
+ * @email wysznb@hotmail.com
+ * 
+ */
+@Repository
+public class DesListenerImpl implements DesListener {
+	private volatile int i = 0;
+	private TaskLogger logger = TaskLogger.getLogger(DesListenerImpl.class);
+	@Resource
+	private WebServiceContext webServiceContext;
+	private final static ConcurrentHashMap<String, String> LINKED_THREAD = new ConcurrentHashMap<String, String>();
+
+	@Override
+	public boolean push(String appId,String ip) {
+		if (LINKED_THREAD.containsKey(appId)) {
+			return false;
+		} else {
+			LINKED_THREAD.put(appId, ip);
+			Thread.currentThread().setName("通知");
+			logger.info("new request from "+ip);
+			synchronized (this) {
+				i++;
+			}
+			return true;
+		}
+	}
+	@Override
+	public void pop(String appId){
+		LINKED_THREAD.remove(appId);
+	}
+	/* 
+	 * @see cn.cetelem.des.thread.listener.DesListener#getIp(java.lang.String)
+	 */
+	@Override
+	public String getIp(String appId) {
+		return LINKED_THREAD.get(appId);
+	}
+	/* 
+	 * @see cn.cetelem.des.thread.listener.DesListener#getAll()
+	 */
+	@Override
+	public Map<String, String> getAll() {
+		return LINKED_THREAD;
+	}
+	
+	public int getAllCount(){
+		return i;
+	}
+
+}

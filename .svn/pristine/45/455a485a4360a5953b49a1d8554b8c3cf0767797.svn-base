@@ -1,0 +1,17 @@
+package cn.cetelem.des.test.task;
+
+import org.springframework.stereotype.Repository;
+
+import cn.cetelem.des.interceptor.TaskLogger;
+import cn.cetelem.des.taskBean.TaskBean;
+
+@Repository
+public class Task2 implements TaskBean {
+	private TaskLogger logger = TaskLogger.getLogger(Task2.class);
+	@Override
+	public Object invoke(Object context) {
+		logger.info("正在执行Task2");
+		return context;
+	}
+
+}

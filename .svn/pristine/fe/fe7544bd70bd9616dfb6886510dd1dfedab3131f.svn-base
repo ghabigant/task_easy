@@ -1,0 +1,4 @@
+maxTotal=60
+maxTotalPerKey=5
+maxIdlePerKey=10
+minIdlePerKey=5

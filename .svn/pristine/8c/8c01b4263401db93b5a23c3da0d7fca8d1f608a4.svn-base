@@ -1,0 +1,19 @@
+package cn.cetelem.des.test.task;
+
+import cn.cetelem.des.interceptor.TaskLogger;
+import cn.cetelem.des.taskBean.TaskBean;
+import cn.cetelem.des.utils.Singleton;
+import cn.cetelem.des.utils.Task;
+
+@Task
+@Singleton
+public class Task1 implements TaskBean {
+	private TaskLogger logger = TaskLogger.getLogger(Task1.class);
+	@Override
+	public Object invoke(Object context) {
+		logger.info("正在执行Task1");
+		
+		return context;
+	}
+
+}
