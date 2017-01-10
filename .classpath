@@ -2,54 +2,18 @@
 <classpath>
 	<classpathentry excluding="test/" kind="src" path="src"/>
 	<classpathentry kind="src" path="src/test"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.6.0_13">
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.6.0_45">
 		<attributes>
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/aopalliance-1.0.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/aspectjweaver-1.6.9.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/c3p0-0.9.1.2.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/cglib-nodep-2.2.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-beanutils-1.7.0.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-collections-3.2.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-dbcp-1.4.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-fileupload-1.2.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-httpclient-3.1.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-lang-2.5.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-logging-1.1.1.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-pool-1.5.3.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/dom4j-1.6.1.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/ezmorph-1.0.3.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jackson-annotations-2.4.2.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jackson-core-2.4.2.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jackson-databind-2.4.2.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/javax.servlet.jsp.jstl.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/json-lib-2.2.3-jdk15.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jstl-impl-1.2.2.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/kaptcha-2.3.2-jdk14.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/log4j-1.2.16.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/mybatis-3.2.5.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/mybatis-spring-1.2.2.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/mysql-connector-java-5.1.8-bin.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-aop-3.2.8.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-aspects-3.2.8.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-beans-3.2.8.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-build-src-3.2.8.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-context-3.2.8.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-context-support-3.2.8.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-core-3.2.8.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-expression-3.2.8.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-framework-bom-3.2.8.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-instrument-3.2.8.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-instrument-tomcat-3.2.8.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-jdbc-3.2.8.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-jms-3.2.8.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-orm-3.2.8.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-oxm-3.2.8.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-tx-3.2.8.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-web-3.2.8.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring-webmvc-3.2.8.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/standard-1.1.2.jar"/>
-	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+	<classpathentry kind="lib" path="libs/spring-context-3.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="libs/spring-context-support-3.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="libs/spring-beans-3.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="libs/spring-core-3.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="libs/commons-lang-2.5.jar"/>
+	<classpathentry kind="lib" path="libs/aspectjweaver-1.6.9.jar"/>
+	<classpathentry kind="lib" path="libs/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="libs/log4j-1.2.16.jar"/>
+	<classpathentry kind="output" path="Runing/classes"/>
 </classpath>

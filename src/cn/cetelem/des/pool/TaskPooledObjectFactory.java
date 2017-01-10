@@ -8,7 +8,7 @@ import javax.annotation.Resource;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
-import cn.cetelem.des.object_support.task.factory.impl.TaskFactory;
+import cn.cetelem.des.object_support.task.factory.TaskFactory;
 import cn.cetelem.des.pool.impl.DefaultPooledObject;
 import cn.cetelem.des.taskBean.TaskBean;
 

@@ -7,7 +7,7 @@ import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
-import cn.cetelem.des.object_support.task.factory.TaskHoldManager;
+import cn.cetelem.des.object_support.task.factory.impl.TaskHoldManager;
 import cn.cetelem.des.object_support.task.pojo.BaseNode;
 
 /**

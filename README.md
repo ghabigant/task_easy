@@ -1,12 +1,22 @@
 # task_easy
-为银行开发的高效任务管理模块
+Efficient task management module
 
 
+Because the development of the spring environment, so the compiler needs more jar package
+The use of spring alone does not depend on the words only Dom4j, log4j, long, these 3 dependencies
+Method of single use demo, but not after detailed testing and detailed notes and documents, if there is a problem, please tell me, thank you
 
-因为在spring环境开发 所以编译所需要的jar包比较多
+Because the document contains the bank's business, can not upload, if you need to separate documents whthout business
 
-单独使用不依赖spring的话只需要 dom4j,log4j,long,这3个依赖
+email:wswywps@vip.qq.com
 
-单独使用的方法有demo,但暂时没有经过详细测试和详细注释和文档,如有问题,烦劳提出,谢谢
 
-文档因为包含银行的业务,无法上传,如果需要单独发邮件索取 wswywps@vip.qq.com
+#######################################################################
+2017-1-10 
+
+Fixed some bug
+Modify part of the module
+
+If errors occur, some about ClassNotFoundException, please go to the nneededlibs folder
+
+email:wswywps@vip.qq.com

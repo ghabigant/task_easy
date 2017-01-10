@@ -3,7 +3,6 @@ package cn.test.task;
 import cn.cetelem.des.interceptor.TaskLogger;
 import cn.cetelem.des.taskBean.TaskBean;
 import cn.cetelem.des.utils.Multiton;
-import cn.cetelem.des.utils.Singleton;
 import cn.cetelem.des.utils.Task;
 
 /**
@@ -23,7 +22,7 @@ public class End implements TaskBean {
 
 	@Override
 	public Object invoke(Object context) throws Exception {
-		System.out.println("end");
+		logger.info("end");
 		return context;
 	}
 

@@ -15,7 +15,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-import cn.cetelem.des.object_support.task.factory.TaskHandler;
+import cn.cetelem.des.object_support.task.factory.impl.TaskHandler;
 import cn.cetelem.des.taskBean.TaskBean;
 import cn.cetelem.des.utils.Worker;
 import cn.cetelem.des.work_support.worker.TaskWorker;

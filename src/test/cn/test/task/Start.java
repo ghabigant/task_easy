@@ -21,7 +21,7 @@ public class Start implements TaskBean {
 
 	@Override
 	public Object invoke(Object context) throws Exception {
-		System.out.println("start");
+		logger.info("start");
 		return context;
 	}
 

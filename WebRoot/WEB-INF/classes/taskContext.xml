@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tasks SYSTEM "task_1.0.dtd">
-<tasks>
-	<start name="start" expression="true" goto="end" />
-	
-	<end name="end" expression="true" />
-</tasks>
